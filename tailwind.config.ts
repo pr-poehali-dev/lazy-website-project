@@ -61,6 +61,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				game: {
+					orange: '#FF6B35',
+					blue: '#45B7D1', 
+					mint: '#F6CEB4',
+					yellow: '#DDA0DD',
+					purple: '#8B5CF6'
 				}
 			},
 			borderRadius: {
@@ -84,11 +91,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-slow': {
+					'0%, 100%': {
+						transform: 'translateY(-25%)',
+						'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)'
+					},
+					'50%': {
+						transform: 'none',
+						'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+					}
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-slow': 'bounce-slow 3s infinite',
+				'wiggle': 'wiggle 1s ease-in-out infinite'
 			}
 		}
 	},
